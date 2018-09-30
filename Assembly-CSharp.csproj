@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AppleTree.cs" />
     <Compile Include="Assets\Scripts\Basket.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/adari/Documents/School/CSC 476/Apple Picker Prototype/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
