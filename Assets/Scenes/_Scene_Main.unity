@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 398888616}
+  closeButton: {fileID: 0}
 --- !u!114 &398888616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 1010137000}
+  closeButton: {fileID: 398888616}
 --- !u!114 &1010137000
 MonoBehaviour:
   m_ObjectHideFlags: 0

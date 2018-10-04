@@ -7,11 +7,14 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public Button startButton;
+    public Button closeButton;
 	// Use this for initialization
 	void Start ()
 	{
-	    Button btn = startButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+	    Button startBtn = startButton.GetComponent<Button>();
+	    Button closeBtn = closeButton.GetComponent<Button>();
+        startBtn.onClick.AddListener(StartTaskOnClick);
+        closeBtn.onClick.AddListener(ExitTaskOnClick);
 	}
 	
 	// Update is called once per frame
@@ -19,8 +22,13 @@ public class StartMenu : MonoBehaviour
 		
 	}
 
-    void TaskOnClick()
+    void StartTaskOnClick()
     {
         SceneManager.LoadScene("_Scene_0");
+    }
+
+    void ExitTaskOnClick()
+    {
+        Application.Quit();
     }
 }

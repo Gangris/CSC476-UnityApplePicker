@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour
 {
-    static public int score = 1000;
+    public static int score = 1000;
 
     void Awake()
     {
@@ -13,8 +13,10 @@ public class HighScore : MonoBehaviour
         {
             score = PlayerPrefs.GetInt("HighScore");
         }
-
-        PlayerPrefs.SetInt("HighScore", score);
+        else
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
     }
 
 	// Use this for initialization

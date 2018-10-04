@@ -8,11 +8,14 @@ public class Basket : MonoBehaviour
     [Header("Set Dynamically")]
     public Text scoreGT;
 
+    public static int score;
+
 	// Use this for initialization
 	void Start () {
 	    GameObject scoreGO = GameObject.Find("ScoreCounter");
 	    scoreGT = scoreGO.GetComponent<Text>();
-	    scoreGT.text = "0";
+	    score = 0;
+	    scoreGT.text = score.ToString();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +36,6 @@ public class Basket : MonoBehaviour
         {
             Destroy(collidedWith);
 
-            int score = int.Parse(scoreGT.text);
             score += 100;
             scoreGT.text = score.ToString();
 

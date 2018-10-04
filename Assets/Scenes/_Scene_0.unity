@@ -315,6 +315,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ GameObject:
   - component: {fileID: 1132929112}
   - component: {fileID: 1132929114}
   - component: {fileID: 1132929113}
+  - component: {fileID: 1132929115}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -443,6 +445,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132929111}
   m_CullTransparentMesh: 0
+--- !u!114 &1132929115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132929111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4527d23735dc74e4c9a9d73e14fcfc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1435310211
 Prefab:
   m_ObjectHideFlags: 0
@@ -492,6 +505,24 @@ Prefab:
       propertyPath: applePrefab
       value: 
       objectReference: {fileID: 1756155210226118, guid: 3abcb328cfcd4794aa3846b229b75352,
+        type: 2}
+    - target: {fileID: 114650603568164200, guid: aa025b237e2f2264e97dded90f5601c5,
+        type: 2}
+      propertyPath: appleMediumPrefab
+      value: 
+      objectReference: {fileID: 1347442842313408, guid: ca9212a7af0b4e54db246b0f5ef37071,
+        type: 2}
+    - target: {fileID: 114650603568164200, guid: aa025b237e2f2264e97dded90f5601c5,
+        type: 2}
+      propertyPath: appleHardPrefab
+      value: 
+      objectReference: {fileID: 1333164168977934, guid: 02646700dd49c4047b8522135cea6251,
+        type: 2}
+    - target: {fileID: 114650603568164200, guid: aa025b237e2f2264e97dded90f5601c5,
+        type: 2}
+      propertyPath: appleImpossiblePrefab
+      value: 
+      objectReference: {fileID: 1804186460811044, guid: 93a5a001d6ab97f45b626663a9cf2276,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa025b237e2f2264e97dded90f5601c5, type: 2}
@@ -563,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Score: 1000'
+  m_Text: 'Score: 1000'
 --- !u!222 &1585479053
 CanvasRenderer:
   m_ObjectHideFlags: 0
