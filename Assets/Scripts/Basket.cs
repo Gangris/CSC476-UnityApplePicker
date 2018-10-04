@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,19 @@ public class Basket : MonoBehaviour
 
     public static int score;
 
+    private Dictionary<string, int> scoreMap = new Dictionary<string, int>();
+
 	// Use this for initialization
 	void Start () {
 	    GameObject scoreGO = GameObject.Find("ScoreCounter");
 	    scoreGT = scoreGO.GetComponent<Text>();
 	    score = 0;
 	    scoreGT.text = score.ToString();
+
+        scoreMap.Add("Apple(Clone)", 100);
+        scoreMap.Add("AppleMedium(Clone)", 200);
+        scoreMap.Add("AppleHard(Clone)", 400);
+        scoreMap.Add("AppleImpossible(Clone)", 800);
 	}
 	
 	// Update is called once per frame
@@ -34,15 +42,15 @@ public class Basket : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.tag == "Apple")
         {
-            Destroy(collidedWith);
-
-            score += 100;
+            score += scoreMap[collidedWith.name];
             scoreGT.text = score.ToString();
 
             if (score > HighScore.score)
             {
                 HighScore.score = score;
             }
+
+            Destroy(collidedWith);
         }
     }
 }
